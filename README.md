@@ -23,6 +23,6 @@ int main()
 
     router.regist(Route::Method::GET, "/path/:id/some", test_get);
     
-    router.call(Rgblab::Method::GET, "/path/1236123/some");
+    router.call(Route::Method::GET, "/path/1236123/some");
 }
 ```
