@@ -5,7 +5,7 @@ Simple URI router
 # Usage
 
 // call back
-'''c
+```c
 inline static void test_get(const Route::Event& e)
 {
     std::cout << "test GET () " << std::endl;
@@ -22,4 +22,4 @@ int main()
     
     router.call(Rgblab::Method::GET, "/path/1236123/some");
 }
-'''
+```
