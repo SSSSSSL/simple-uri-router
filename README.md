@@ -5,6 +5,7 @@ Simple URI router
 # Usage
 
 // call back
+{
 inline static void test_get(const Route::Event& e)
 {
     std::cout << "test GET () " << std::endl;
@@ -13,7 +14,9 @@ inline static void test_get(const Route::Event& e)
 
     return;
 }
+{
 
+{
 int main()
 {
     Route::Router router;
@@ -21,5 +24,6 @@ int main()
     router.regist(Route::Method::GET, "/path/:id/some", test_get);
     
     router.call(Rgblab::Method::GET, "/path/1236123/some");
+}
 }
 
