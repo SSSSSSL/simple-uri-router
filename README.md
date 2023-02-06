@@ -5,7 +5,7 @@ Simple URI router
 # Usage
 
 // call back
-'''
+'''c
 inline static void test_get(const Route::Event& e)
 {
     std::cout << "test GET () " << std::endl;
