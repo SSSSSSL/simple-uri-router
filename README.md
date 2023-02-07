@@ -11,7 +11,10 @@ inline static void test_get(const Route::Event& e)
 {
     std::cout << "test GET () " << std::endl;
 
-    std::cout << e["id"].asInteger() << std::endl;
+    std::cout << e.path().at("id").asInteger() << std::endl;
+    
+    // if exist query parameter
+    // std::cout << e.query().at("some_key").asString() << std::endl;
 
     return;
 }
