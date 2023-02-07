@@ -59,8 +59,10 @@ Route::Source::QueryParamParser::getAll()
 {
     result ans;
 
-    for (auto& k_v : kp->key_value_s)
-        ans.push_back(std::make_pair(kp->data.substr(k_v.key.start, k_v.key.len), kp->data.substr(k_v.val.start, k_v.val.len)));
+    if (kp) {
+        for (auto& k_v : kp->key_value_s)
+            ans.push_back(std::make_pair(kp->data.substr(k_v.key.start, k_v.key.len), kp->data.substr(k_v.val.start, k_v.val.len)));
+    }
 
     return ans;
 }
